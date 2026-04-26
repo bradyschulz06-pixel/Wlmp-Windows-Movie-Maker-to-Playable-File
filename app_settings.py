@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 import json
 from dataclasses import dataclass
 from pathlib import Path
@@ -15,7 +15,7 @@ class AppSettings:
 def load_settings(config_path: Path = DEFAULT_CONFIG_PATH) -> AppSettings:
     if not config_path.exists():
         return AppSettings()
-    data = json.loads(config_path.read_text(encoding="utf-8"))
+    data = json.loads(config_path.read_text(encoding="utf-8-sig"))
     return AppSettings(
         app_title=data.get("app_title", AppSettings.app_title),
         logo_path=data.get("logo_path", AppSettings.logo_path),
