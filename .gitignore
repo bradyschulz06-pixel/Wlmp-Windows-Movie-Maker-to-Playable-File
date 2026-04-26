@@ -1,0 +1,7 @@
+﻿__pycache__/
+*.pyc
+logs/
+build/
+dist/
+release/
+tmp_ffmpeg_download/
